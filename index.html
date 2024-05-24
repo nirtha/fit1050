@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--<link media="screen and (min-width:501px)" href="assignment3_fit1050.css" rel="stylesheet" /> -->
+    <link media="screen and (min-width:501px)" href="indexCSS.css" rel="stylesheet" />
+    <script src="indexJS.js"></script>
+    <meta name="robots" content="noindex,nofollow">
+</head>
+
+<!-- ============================================ -->
+<!--     section 0: Navigation Bar                  -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="cs-logo" aria-label="back to home">
+            <img src="images/alittlelightlogoTRANSPARENT.png" alt="A little light logo" width="120%" height="120%" aria-hidden="true" decoding="async">
+
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link cs-active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">
+                            Artisan Candles
+                            <img class="cs-drop-icon" src="images/Reddown_Arrow_Down.png" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Ombre Pillar Candles</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Chapel Candles</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Cathedral Candles</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">
+                            Natural Candles
+                            <img class="cs-drop-icon" src="images/Reddown_Arrow_Down.png" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Pumpkin Candles</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Pear Candles</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Floating Pebble Candles</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">
+                            Handmade Gifts
+                            <img class="cs-drop-icon" src="images/Reddown_Arrow_Down.png" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Australian Bush Soy Candles</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Scandinavian Santa Decorations</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Scandanavian Wooden Birds</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="cs-contact-group">
+            <a href="tel:+84 1985 33 999" class="cs-phone">
+                <img class="cs-cart-icon" src="images/shoppingCart.png" alt="shopping cart" width="24" height="24" aria-hidden="true" decoding="async">
+            </a>
+            <div class="cs-social">
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="images/facebook.png" alt="facebook logo" width="30" height="30" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="images/twitter.webp" alt="twitter logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="images/instagram.webp" alt="instagram logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
+        </div>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <img class="cs-moon" aria-hidden="true" src="images/moon.webp" decoding="async" alt="moon" width="15" height="15">
+            <img class="cs-sun" aria-hidden="true" src="images/sun.webp" decoding="async" alt="sun" width="15" height="15">
+        </button>
+    </div>
+</header>
+                                
+
+<!-- ============================================ -->
+<!--             section 1: - intro/welcome    -->
+<!-- ============================================ -->
+<section id="sbs-r-1892">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" src="images/candle1.webp">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" src="images/candle1.webp">
+                <img loading="lazy" decoding="async" src="images/candle1.webp" alt="candles" width="324" height="467">
+            </picture>
+            <img class="cs-graphic cs-brown" loading="lazy" decoding="async" src="images/brown1.webp" alt="graphic" width="208" height="203" aria-hidden="true">
+            <img class="cs-graphic cs-peach" loading="lazy" decoding="async" src="images/beige2.webp" alt="graphic" width="56" height="42" aria-hidden="true">
+            <img class="cs-graphic cs-beige" loading="lazy" decoding="async" src="images/beige3.webp" alt="graphic" width="379" height="394" aria-hidden="true">
+            <img class="cs-graphic cs-leaf" loading="lazy" decoding="async" src="images/leaves1.png" alt="graphic" width="179" height="225" aria-hidden="true">
+            <img class="cs-graphic cs-lines" loading="lazy" decoding="async" src="images/brown2.webp" alt="graphic" width="189" height="208" aria-hidden="true">
+            <div class="cs-info">
+                <p class="cs-info-text">
+                    <span class="cs-bold">A little light</span>
+                    Beautiful Handmade Gifts 
+                </p>
+            </div>
+        </div>
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper"><br><br>SECTION 1: Homepage introduction </span>
+                <h2 class="cs-title">Welcome to A Little Light</h2>
+            </div>
+            <p class="cs-text-large">
+                “Work is love made visible.”<br>
+                – Kahlil Gibran
+            </p>
+            <p class="cs-text">
+                A little light - A new attitude to the ancient craft of candle making; the humble candle is elevated to become functional art for the home; born from a desire to live with passion, creativity and connection; handmade in Melbourne.
+            </p>
+            <p class="cs-text">
+                mood lighting -  Whether it be an evening meal with close friends, relaxing with a good book and a glass of wine, or a well-deserved soak in the tub, we light candles to signify moments that really matter.           
+            </p>
+            <p class="cs-text">
+                handmade gifts | alongside our candles, our online shop is filled with beautiful handmade gifts, featuring work by many Australian artists and designers, with a strong emphasis on natural forms, materials and textures.             </p>
+            <a href="https://alittlelight.com.au/" class="cs-button-solid">
+                 Information sourced from: https://alittlelight.com.au/ <br>
+                 Click to visit 
+            </a>
+                    </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--           section 2 : products                -->
+<!-- ============================================ -->
+
+<section id="meet-team-1102">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Our Favourite Products</h2>
+            <p class="cs-text">
+                Having trouble deciding what you want? Here are a few of our most liked and best selling items!        </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" src="images/ombreCandles3_optimized_100.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" src="images/ombreCandles3_optimized_100.jpg">
+                    <img loading="lazy" decoding="async" src="images/ombreCandles3_optimized_100.jpg" alt="Ombre Candles" width="305" height="338">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Ombre Pillar Candles</span>
+                    <span class="cs-job">$24.50 – $425.00</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" src="images/candle10 copy.WEBP">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" src="images/candle10 copy.WEBP">
+                    <img loading="lazy" decoding="async" src="images/candle10 copy.WEBP" alt="Australian soy candles" width="305" height="338">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Soy Candles</span>
+                    <span class="cs-job">$15.00 – $42.00</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" src="images/eggCandle2.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" src="images/eggCandle2.jpg">
+                    <img loading="lazy" decoding="async" src="images/eggCandle2.jpg" alt="Egg Candles" width="305" height="338">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Egg Candles</span>
+                    <span class="cs-job">$37.50 – $215.00</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" src="images/fruitshapeCandle.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" src="images/fruitshapeCandle.jpg">
+                    <img loading="lazy" decoding="async" src="images/fruitshapeCandle.jpg" alt="Ombre Candles" width="305" height="338">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Fruit Shaped Candles</span>
+                    <span class="cs-job">$39.00 – $49.00</span>
+                </div>
+            </li>
+         </ul>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--          section 3: subscribe/sign up                   -->
+<!-- ============================================ -->
+
+<section id="subscribe-1719">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">SECTION 3: SUBSCRIBE </span>
+            <h2 class="cs-title">Subscribe to us</h2>
+            <p class="cs-text">
+                Stay in touch and stay updated with our upcoming promotions and blog. Enter your details below!
+            </p>
+            <form class="cs-form" name="Contact Form" method="post">
+                <input class="cs-input" type="name" id="cs-name-301-1719" name="find-us" placeholder="Name" required>
+                <input class="cs-input" type="email" id="cs-email-301-1719" name="find-us" placeholder="Email Address" required>
+                <button class="cs-button-solid cs-submit" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" src="images/candle5.webp">
+        <source media="(min-width: 601px)" src="images/candle5.webp">
+        <img loading="lazy" decoding="async" src="images/candle5.webp" alt="people" width="1920" height="486" aria-hidden="true">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--           section 4:   blog                -->
+<!-- ============================================ -->
+<section id="events-1652">
+    <div class="cs-container">
+        <div class="cs-image">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" src="images/blog.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" src="images/blog.jpeg">
+                <img loading="lazy" decoding="async" src="images/blog.jpeg" alt="Blog Main Pic(Candles)" width="522" height="609" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-events">
+            <div class="cs-content">
+                <span class="cs-topper">SECTION 4: BLOG </span>
+                <h2 class="cs-title">Our blog</h2>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <picture class="cs-blog-picture">
+                        <img loading="lazy" decoding="async" src="images/bushfire.jpeg" alt="Blog Pic 1" width="100" height="100">
+                    </picture>
+                    <div class="cs-info-wrapper">
+                        <div class="cs-info">
+                            <h3 class="cs-h3">Finding hope after the bushfires</h3>
+                            <span class="cs-blog-description">I wasn’t prepared for 2020. I wasn’t prepared for the heartbreak, for the overwhelming loss, and for the shifting world we find ourselves living in... </span>
+                        </div>
+                        <div class="cs-button-wrapper">
+                            <a href="" class="cs-button-solid">Read More</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-blog-picture">
+                        <img loading="lazy" decoding="async" src="images/candle14.jpeg" alt="Blog Pic 1" width="100" height="100">
+                    </picture>
+                    <div class="cs-info-wrapper">
+                        <div class="cs-info">
+                            <h3 class="cs-h3">Embracing your imperfections</h3>
+                            <span class="cs-blog-description">“Embrace your imperfections. Celebrate your unique shape and character. You have no idea how your beauty shines.”...</span>
+                        </div>
+                        <div class="cs-button-wrapper">
+                            <a href="" class="cs-button-solid">Read More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div> 
+</section>
+
+<!-- ============================================ -->
+<!--           section 5: footer                      -->
+<!-- ============================================ -->
+
+<footer id="footer-1390">
+    <div class="cs-container">
+        <div class="cs-top">
+            <a aria-label="go back to home" class="cs-footer-title" href="">A Little Light</a>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a href="" class="cs-link">Home</a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">Wholesale Enquiries</a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">About</a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">Blog</a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-bottom">
+            <!--Social-->
+            <ul class="cs-social">
+                <li class="cs-social-li">
+                    <a href="" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="images/facebook.png" alt="facebook Logo" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+                <li class="cs-social-li">
+                    <a href="" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="images/twitter.webp" alt="twitter logo" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+                <li class="cs-social-li">
+                    <a href="" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="images/instagram.webp" alt="instagram logo" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+            </ul>
+            <span class="cs-copyright">
+                © Copyright 2024 - <a href="" class="cs-copyright-link">A Little Light</a>
+            </span>
+            <div class="cs-flex">
+                <a href="" class="cs-copyright-link">Privacy Policy</a>
+                <span class="cs-separater">|</span>
+                <a href="" class="cs-copyright-link">Terms of Use</a>
+            </div>
+        </div>
+    </div>
+</footer>
+                                
